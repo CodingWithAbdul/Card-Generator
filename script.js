@@ -4,10 +4,12 @@ let viewstr;
 
 function card(title, cName, views, monthsOld, duration) {
     if(views < 1000000 && views > 999){
-        viewstr = views/1000   + "K";
+        views = Math.floor (views/1000)
+        viewstr = views   + "K";
     }
     else if(views > 1000000){
-        viewstr =  views/1000000   + "M";
+        views = Math.floor (views/1000000)
+        viewstr =  views   + "M";
     }
     else{
         viewstr = views
